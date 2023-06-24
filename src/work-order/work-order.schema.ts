@@ -36,6 +36,8 @@ export class WorkOrder {
   comment: string;
   @Prop()
   date: string;
+  @Prop()
+  assemblesData: any[]
 }
 
 export type WorkOrderDocument = HydratedDocument<WorkOrder>;
