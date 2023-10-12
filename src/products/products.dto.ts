@@ -11,4 +11,5 @@ export interface ProductsDTO {
   storeLocation: string;
   ledgerPageNumber: string;
   category: string;
+  orderPlaced?: boolean
 }

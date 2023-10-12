@@ -27,6 +27,8 @@ export class Product {
   ledgerPageNumber: string;
   @Prop()
   category: string;
+  @Prop()
+  orderPlaced: boolean;
 }
 
 export type ProductDocument = HydratedDocument<Product>;

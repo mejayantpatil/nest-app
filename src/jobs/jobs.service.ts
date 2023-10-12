@@ -5,7 +5,7 @@ import { Job, JobDocument } from './jobs.schema';
 
 @Injectable()
 export class JobService {
-  constructor(@InjectModel(Job.name) private jobModel: Model<JobDocument>) {}
+  constructor(@InjectModel(Job.name) private jobModel: Model<JobDocument>) { }
 
   async findOne(id: string): Promise<Job> {
     //    return this.jobs.find(job=>job.jobname===jobname)
@@ -21,7 +21,7 @@ export class JobService {
   }
 
   async update(id: string, jobDTO: any): Promise<Job> {
-    return await this.jobModel.findByIdAndUpdate({ _id: id }, jobDTO).exec();
+    return await this.jobModel.findByIdAndUpdate(id, jobDTO).exec();
   }
 
   async delete(id: string) {

@@ -9,6 +9,10 @@ export class Vehicle {
   vehicleType: string;
   @Prop()
   currentKM: number
+  @Prop()
+  oilChange: string
+  @Prop()
+  service: string
 }
 
 export type VehicleDocument = HydratedDocument<Vehicle>;

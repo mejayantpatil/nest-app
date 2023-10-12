@@ -7,7 +7,7 @@ import { Vehicle, VehicleDocument } from './vehicle.schema';
 export class VehicleService {
   constructor(
     @InjectModel(Vehicle.name) private vehicleModel: Model<VehicleDocument>,
-  ) {}
+  ) { }
 
   async findOne(id: string): Promise<Vehicle> {
     //    return this.vehicles.find(vehicle=>vehicle.vehiclename===vehiclename)

@@ -94,7 +94,7 @@ export class CategoryController {
       await fs.writeFile(
         backupPath +
         '/category-backup-' +
-        new Date().toISOString().substring(0, 10) +
+        // new Date().toISOString().substring(0, 10) +
         '.json',
         JSON.stringify(res),
         (err) => {

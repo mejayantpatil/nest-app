@@ -8,7 +8,7 @@ export class TransactionService {
   constructor(
     @InjectModel(Transaction.name)
     private transactionModel: Model<TransactionDocument>,
-  ) {}
+  ) { }
 
   async findOne(id: string): Promise<Transaction> {
     //    return this.transactions.find(transaction=>transaction.transactionname===transactionname)
@@ -25,7 +25,7 @@ export class TransactionService {
 
   async update(id: string, transactionDTO: any): Promise<Transaction> {
     return await this.transactionModel
-      .findByIdAndUpdate({ _id: id }, transactionDTO)
+      .findByIdAndUpdate(id, transactionDTO)
       .exec();
   }
 

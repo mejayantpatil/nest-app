@@ -46,6 +46,8 @@ class CardData {
   @Prop()
   oilChange: string;
   @Prop()
+  service: string;
+  @Prop()
   problem: string;
   @Prop()
   netAmount: number;

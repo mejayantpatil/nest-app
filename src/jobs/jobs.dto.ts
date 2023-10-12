@@ -23,6 +23,7 @@ export interface JobDTO {
   modelName: string;
   kmCovered: number;
   oilChange: string;
+  service: string;
   problem: string;
   netAmount: number;
   comment: string;
@@ -42,6 +43,7 @@ interface CardData {
   modelName: string;
   kmCovered: number;
   oilChange: string;
+  service: string;
   problem: string;
   netAmount: number;
   comment: string;
