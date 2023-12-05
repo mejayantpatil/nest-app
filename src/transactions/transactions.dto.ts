@@ -19,6 +19,7 @@ export interface TransactionDTO {
   transactionNo: number;
   paymentMode: string;
   supplierInvoiceNo: string;
+  purchaseOrderNo: string
   supplierName: string;
   date: string;
   data: Data[];
@@ -27,6 +28,7 @@ export interface TransactionDTO {
   tradeDiscount: number;
   igst: number;
   grandTotal: number;
+  roundOff: number;
   cashDiscount: number;
   otherCharges: number;
   netAmount: number;

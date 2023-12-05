@@ -41,6 +41,8 @@ export class Transaction {
   @Prop()
   supplierInvoiceNo: string;
   @Prop()
+  purchaseOrderNo: string
+  @Prop()
   supplierName: string;
   @Prop()
   date: string;
@@ -56,6 +58,8 @@ export class Transaction {
   igst: number;
   @Prop()
   grandTotal: number;
+  @Prop()
+  roundOff: number;
   @Prop()
   cashDiscount: number;
   @Prop()

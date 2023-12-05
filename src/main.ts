@@ -12,4 +12,4 @@ async function bootstrap() {
 }
 bootstrap();
 
-export const backupPath = 'd:/DB backup-vishwayodhha';
+export const backupPath = 'E:\DB backup-vishwayodhha';
