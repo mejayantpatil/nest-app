@@ -87,6 +87,21 @@ export class SupplyOrderController {
     return this.supplyOrderService.findOne(id);
   }
 
+  @Post('getByDate')
+  async getByDate(@Body() payload: any) {
+    return this.supplyOrderService.findAll().then((res) => {
+      const startDate = new Date(payload.startDate);
+      const endDate = new Date(payload.endDate);
+      return res.filter((t) => {
+        const oDate = new Date(t.date);
+        return (
+          oDate.getTime() >= startDate.getTime() &&
+          oDate.getTime() <= endDate.getTime()
+        );
+      });
+    })
+  }
+
   @Post('backup')
   async getBackup(@Res() response) {
     return this.supplyOrderService.findAll().then(async (res) => {

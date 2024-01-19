@@ -84,6 +84,21 @@ export class WorkOrderController {
     return this.workOrderService.findOne(id);
   }
 
+  @Post('getByDate')
+  async getByDate(@Body() payload: any) {
+    return this.workOrderService.findAll().then((res) => {
+      const startDate = new Date(payload.startDate);
+      const endDate = new Date(payload.endDate);
+      return res.filter((t) => {
+        const oDate = new Date(t.date);
+        return (
+          oDate.getTime() >= startDate.getTime() &&
+          oDate.getTime() <= endDate.getTime()
+        );
+      });
+    })
+  }
+
   @Post('backup')
   async getBackup(@Res() response) {
     return this.workOrderService.findAll().then(async (res) => {
