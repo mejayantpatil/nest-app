@@ -93,7 +93,7 @@ export class CardController {
       await fs.writeFile(
         backupPath +
         '/cards-backup-' +
-        // new Date().toISOString().substring(0, 10) +
+        new Date().toISOString().substring(0, 10) +
         '.json',
         JSON.stringify(res),
         (err) => {

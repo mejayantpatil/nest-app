@@ -16,7 +16,7 @@ import { WorkOrderModule } from './work-order/work-order.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/vishwayodhaDB'),
+    MongooseModule.forRoot('mongodb://127.0.0.1:27017/vishwayodhaDB3'),
     UserModule,
     GroupModule,
     CategoryModule,

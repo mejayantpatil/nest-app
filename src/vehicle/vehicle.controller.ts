@@ -94,7 +94,7 @@ export class VehicleController {
             await fs.writeFile(
                 backupPath +
                 '/vehicle-backup-' +
-                // new Date().toISOString().substring(0, 10) +
+                new Date().toISOString().substring(0, 10) +
                 '.json',
                 JSON.stringify(res),
                 (err) => {
