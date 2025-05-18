@@ -93,7 +93,7 @@ export class GroupController {
       }
       await fs.writeFile(
         backupPath +
-        '/group-backup-' +
+        '/groups-backup-' +
         new Date().toISOString().substring(0, 10) +
         '.json',
         JSON.stringify(res),

@@ -84,6 +84,30 @@ export class JobController {
     return this.jobService.findOne(id);
   }
 
+  @Post('getByDateRange')
+  async getJobsByDateRange(@Body() payload: any) {
+    return this.jobService.findAll().then((res) => {
+      const startDate = new Date(payload.startDate);
+      const endDate = new Date(payload.endDate);
+      const data = [];
+      res.map((t) => {
+        const d = [];
+        t.cardData.map((j) => {
+          const jDate = new Date(j.jobCardDate);
+          if (
+            jDate.getTime() >= startDate.getTime() &&
+            jDate.getTime() <= endDate.getTime()
+          ) {
+            d.push(t);
+          }
+        });
+
+        d.length > 0 && data.push(...d);
+      });
+      return data;
+    });
+  }
+
   @Post('getByDate')
   async getJobsByDate(@Body() payload: any) {
     return this.jobService.findAll().then((res) => {
